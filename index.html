@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <html lang="en">
+    <head>
+      <title>greate square</title>
+      <style>
+        .square {
+          width: 200px;
+          height: 200px;
+          display: inline-block;
+          margin: 5px;
+          text-align: center;
+          line-height: 200px;
+          font-size: 20px;
+          color: white;
+        }
+      </style>
+    </head>
+    <body>
+    
+    <script>
+      // Create 5 div elements with class name "square"
+      for (let i = 1; i <= 5; i++) {
+        const newDiv = document.createElement('div');
+        newDiv.className = 'square';
+        document.body.appendChild(newDiv);
+      }
+    
+      // Access div elements by class name and draw squares with different colors
+      const squares = document.querySelectorAll('.square');
+      squares.forEach((square, index) => {
+        square.style.backgroundColor = getRandomColor();
+        square.textContent =  `${index + 1}`;
+      });
+    
+      // Function to generate a random color
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+    
+    </body>
+    </html>
+    
+ 
+  
+   
+
+
+  </script>
+    
+  
+  </body>
+</html>
